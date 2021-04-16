@@ -1,0 +1,33 @@
+{
+    "name": "js-common",
+    "author": {
+      "name": "Alex Collette",
+      "email": "alex@hiddenquarter.com",
+      "url": "https://hiddenquarter.com"
+    },
+    "copyright": "© Hiddenquarter 2021",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "lint": "eslint .",
+      "fix": "echo \"Running linter...\" && yarn run lint --fix",
+      "test": "node test",
+      "bump": "$(npm bin)/bump --tag --commit && git push && git push --tags"
+    },
+    "devDependencies": {
+      "babel-eslint": "^10.1.0",
+      "eslint": "^7.17.0",
+      "eslint-plugin-prefer-arrow": "^1.2.2",
+      "pre-commit": "^1.2.2",
+      "version-bump-prompt": "^6.1.0"
+    },
+    "peerDependencies": {
+      "eslint": "^7.17.0",
+      "eslint-plugin-prefer-arrow": "^1.2.2",
+      "pre-commit": "^1.2.2"
+    },
+    "pre-commit": [
+      "lint"
+    ]
+  }
